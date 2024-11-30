@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    background-color: whitesmoke;
+}
+
+h1{
+    padding: 40px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    width: 300px;
+    background: peru;
+    margin: 40px auto;
+}
+
+span{
+    padding: 20px;
+    background: burlywood;
+    color: azure;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
+span ::after{
+    position: absolute;
+    right: 12px;
+    content: '\21D3';
+}
+
+.slide{
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    list-style: none;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.slide li{
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.slide li:hover{
+    font-weight: bold;
+}
+
+#touch{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+}
+
+#touch:checked + .slide{
+    height: 180px;
+}
